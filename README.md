@@ -7,3 +7,4 @@ Tutorial ini dari
 
 1. Initialize the npm init `$ npm init`, enter2 aja
 2. Install ExpressJS `$ npm install express`
+3. Install hbs `$ npm install hbs`
