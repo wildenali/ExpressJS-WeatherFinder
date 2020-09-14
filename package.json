@@ -1,0 +1,19 @@
+{
+  "name": "expressjs-weatherfinder",
+  "version": "1.0.0",
+  "description": "Belajar membuat aplikasi Weather Finder dengan menggunakan ExpressJS, NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildenali/ExpressJS-WeatherFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wildenali/ExpressJS-WeatherFinder/issues"
+  },
+  "homepage": "https://github.com/wildenali/ExpressJS-WeatherFinder#readme"
+}
