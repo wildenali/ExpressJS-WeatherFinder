@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require("path");
+const router = require("./router");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -9,15 +10,7 @@ app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "hbs");
 
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Express Weather Finder",
-  });
-});
-
-app.get("/about", (req, res) => {
-  res.render("about");
-});
+app.use("/", router);
 
 // app.get("/", (req, res) => {
 //   res.sendFile("index.html", {
