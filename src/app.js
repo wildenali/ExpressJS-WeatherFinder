@@ -14,7 +14,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.send("Ini di About");
+  res.sendFile("about.html", {
+    root: path.join(__dirname, "../public/"),
+  });
 });
 
 app.listen(PORT, () =>
