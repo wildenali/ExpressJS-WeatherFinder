@@ -8,3 +8,6 @@ Tutorial ini dari
 1. Initialize the npm init `$ npm init`, enter2 aja
 2. Install ExpressJS `$ npm install express`
 3. Install hbs `$ npm install hbs`
+4. Pakai open weather api [https://openweathermap.org/api](https://openweathermap.org/api)
+5. Login / Register dulu, kemudian ambil API keys nya
+6. Go to [https://openweathermap.org/current](https://openweathermap.org/current)
