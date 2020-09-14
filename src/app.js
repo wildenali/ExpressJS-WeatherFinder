@@ -10,7 +10,9 @@ app.set("views", "views");
 app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    title: "Express Weather Finder",
+  });
 });
 
 app.get("/about", (req, res) => {
