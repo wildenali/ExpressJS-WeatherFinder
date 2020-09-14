@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wildenali/ExpressJS-WeatherFinder/issues"
   },
-  "homepage": "https://github.com/wildenali/ExpressJS-WeatherFinder#readme"
+  "homepage": "https://github.com/wildenali/ExpressJS-WeatherFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
