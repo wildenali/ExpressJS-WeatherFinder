@@ -26,8 +26,14 @@ exports.getWeather = (req, res) => {
       .then((response) => {
         // console.log(response);
         // console.log(`It is currenty ${response.data.main.temp} in ${response.data.name}`);
+        // res.render("index", {
+        //   weather: `It is currenty ${response.data.main.temp} in ${response.data.name}`,
+        // });
+
+        const { temp: temperature } = response.data.main;
+        const { name: location } = response.data;
         res.render("index", {
-          weather: `It is currenty ${response.data.main.temp} in ${response.data.name}`,
+          weather: `It is currenty ${temperature} in ${location}`,
         });
       })
       .catch((error) => {
