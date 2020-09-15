@@ -1,6 +1,8 @@
 const axios = require("axios");
 const API_KEY = "93b1d3d702c99ad2e1888d01604dfb21";
 
+const Weather = require("../model/Weather");
+
 exports.renderHomePage = (req, res) => {
   res.render("index");
 };
@@ -10,18 +12,28 @@ exports.getWeather = (req, res) => {
   // res.send(`You typed ${req.body.city}`);
   const city = req.body.city;
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-  axios
-    .get(url)
-    .then((response) => {
-      // console.log(response);
-      // console.log(`It is currenty ${response.data.main.temp} in ${response.data.name}`);
-      res.render("index", {
-        weather: `It is currenty ${response.data.main.temp} in ${response.data.name}`,
-      });
-    })
-    .catch((error) => {
-      console.log(error);
+
+  const weather = new Weather(req.body.city);
+  weather.validateUserInput();
+
+  if (weather.errors.length) {
+    res.render("index", {
+      error: weather.errors.toString(),
     });
+  } else {
+    axios
+      .get(url)
+      .then((response) => {
+        // console.log(response);
+        // console.log(`It is currenty ${response.data.main.temp} in ${response.data.name}`);
+        res.render("index", {
+          weather: `It is currenty ${response.data.main.temp} in ${response.data.name}`,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 };
 
 exports.renderAboutPage = (req, res) => {
