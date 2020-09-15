@@ -12,3 +12,5 @@ Tutorial ini dari
 5. Login / Register dulu, kemudian ambil API keys nya
 6. Go to [https://openweathermap.org/current](https://openweathermap.org/current)
 7. Install axios `$ npm install axios`
+
+![Image of Screenshot Project](https://github.com/wildenali/ExpressJS-WeatherFinder/blob/master/ScreenshotWeatherFinderApp.PNG)
