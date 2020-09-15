@@ -11,3 +11,4 @@ Tutorial ini dari
 4. Pakai open weather api [https://openweathermap.org/api](https://openweathermap.org/api)
 5. Login / Register dulu, kemudian ambil API keys nya
 6. Go to [https://openweathermap.org/current](https://openweathermap.org/current)
+7. Install axios `$ npm install axios`
